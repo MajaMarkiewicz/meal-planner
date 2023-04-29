@@ -2,7 +2,7 @@ import { FC } from "react";
 
 interface InputProps {
     className: String;
-  }
+}
 
 const Input: FC<InputProps> = ({ className, ...props }) => {
   return (
