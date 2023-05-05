@@ -41,7 +41,7 @@ const AuthForm = ({ mode }: { mode: "register" | "signin" }) => {
             await signin(formState);
             }
 
-            router.replace("/home");
+            router.replace("/");
         } catch (e) {
             setError(`Could not ${mode}`);
         } finally {
