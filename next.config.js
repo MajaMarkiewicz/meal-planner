@@ -1,12 +1,14 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const withPWA = require("@ducanh2912/next-pwa").default({
+  dest: "public",
+});
+
+module.exports = withPWA({
   experimental: {
     appDir: true,
     serverComponentsExternalPackages: ['bcrypt'],
   },
   typescript: {
-    ignoreBuildErrors: true, // @TODO fix ts error and delete ignoreBuildErrors
+    ignoreBuildErrors: true, // @TODO fix ts errors and delete ignoreBuildErrors
   }
-}
-
-module.exports = nextConfig
+});

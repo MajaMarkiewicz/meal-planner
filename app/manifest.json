@@ -1,0 +1,27 @@
+{
+    "name": "Meal planner - prepare meals efficiently!",
+    "short_name": "Meal planner",
+    "icons": [
+      {
+        "src": "meal-icon.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "meal-icon.png",
+        "sizes": "384x384",
+        "type": "image/png"
+      },
+      {
+        "src": "meal-icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "theme_color": "#FFFFFF",
+    "background_color": "#FFFFFF",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait"
+  }
