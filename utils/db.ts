@@ -10,7 +10,7 @@ export const dbConnect = async () => {
 
   return connection
 }
-dbConnect() // @TODO where is the best to call dbConnect?
+dbConnect()
 
 export const db = {
   user: userModel()
@@ -25,5 +25,6 @@ function userModel() { //@TODO move model to its own file while more schemas in 
       timestamps: true
   });
 
+  console.log('userSchema created')
   return models.User || model<User>('User', userSchema);
 }

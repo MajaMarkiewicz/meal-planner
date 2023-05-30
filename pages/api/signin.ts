@@ -7,7 +7,6 @@ export default async function signin(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  console.log('api/signin', {req, res});
     if (req.method !== "POST") {
         res.status(405);
         res.end();

@@ -7,17 +7,18 @@ export default async function register(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  console.log('api/register', {req, res})
   if (req.method !== "POST") {
     res.status(402);
     res.json({});
     return;
   }
-  const user = await db.user.create({ // @TODO add seperate layer (eg. service) that calls the detabase;
+  console.log('before db user create', db.user)
+  const user = await db.user.create({ // @TODO add seperate layer (eg. service) that calls the database;
     email: req.body.email,
     password: await hashPassword(req.body.password),
     name: req.body.name,
   });
+  console.log('after db user created')
   const jwt = await createJWT(user);
   const weekInSec = 60 * 60 * 24 * 7;
   res.setHeader(
